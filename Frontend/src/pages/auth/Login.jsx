@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   const [userDetails, setUser] = useState({
     email: "",
     password: "",
@@ -23,12 +23,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Sending request to:", "http://localhost:8080/api/v1/user/login");
+      console.log("Sending request to:", `${API_URL}/api/v1/user/login`);
 // console.log(userDetails);
 console.log("Sending:", userDetails);
 
 
-      const res = await axios.post("http://localhost:8080/api/v1/user/login", userDetails);
+      const res = await axios.post(`${API_URL}/api/v1/user/login`, userDetails);
       localStorage.setItem("AccessToken", res.data.AccessToken);
       toast.success("Login successful");
     //   

@@ -1,0 +1,19 @@
+service: event-management-api
+
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: ap-south-1
+  timeout: 30
+  memorySize: 1024
+
+functions:
+  api:
+    handler: src/lambda.handler
+
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: ANY

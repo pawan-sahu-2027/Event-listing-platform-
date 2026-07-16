@@ -10,7 +10,7 @@ const OtpInput = () => {
 
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [loading, setLoading] = useState(false);
-
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   // ❗ If user directly opens page
   if (!email) {
     return (
@@ -67,7 +67,7 @@ const OtpInput = () => {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:8080/api/v1/user/otpVerification",
+        `${API_URL}/api/v1/user/otpVerification`,
         {
           otp: finalOtp,
           email,

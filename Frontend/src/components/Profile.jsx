@@ -24,13 +24,13 @@ const Profile = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   // ✅ Fetch user details
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const res = await axios.post(
-          "http://localhost:8080/api/v1/user/getUserData",
+          `${API_URL}/api/v1/user/getUserData`,
           { email }
         );
 
@@ -100,7 +100,7 @@ const Profile = () => {
 
     try {
       await axios.patch(
-        `http://localhost:8080/api/v1/user/completeProfile`,
+        `${API_URL}/api/v1/user/completeProfile`,
         data,
         {
           headers: {

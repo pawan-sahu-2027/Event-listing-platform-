@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // 🔥 API
-const API = "http://localhost:8080/api/v1/user/"; 
+const API = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com/api/v1/user/"; 
 
 // ✅ GET USER
 export const getUser = createAsyncThunk("user/getUser", async () => {

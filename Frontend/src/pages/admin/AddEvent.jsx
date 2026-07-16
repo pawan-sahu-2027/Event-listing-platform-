@@ -36,7 +36,7 @@ const AddEvent = () => {
   const [coupon, setCoupon] = useState("");
 
   const [discount, setDiscount] = useState(0);
-
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   const [promotion, setPromotion] = useState({
     highlight: false,
 
@@ -133,7 +133,7 @@ const AddEvent = () => {
   const applyCoupon = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/payment/apply-coupon",
+        `${API_URL}/api/v1/payment/apply-coupon`,
 
         {
           code: coupon,

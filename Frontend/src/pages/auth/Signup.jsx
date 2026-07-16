@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Signup = () => {
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
@@ -44,7 +45,7 @@ const Signup = () => {
       const googleToken = await result.user.getIdToken(); // ✅ FIX
       const email = result.user.email; // ✅ FIX
       const res = await axios.post(
-  "http://localhost:8080/api/v1/user/googleSignUp",
+  `${API_URL}/api/v1/user/googleSignUp`,
   { googleToken }
 );
       toast.success("Signed up successfully");
@@ -59,7 +60,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/user/signUp", formData);
+      const res = await axios.post(`${API_URL}/api/v1/user/signUp`, formData);
 
       toast.success("Account created successfully");
         console.log("response data ",res.data);

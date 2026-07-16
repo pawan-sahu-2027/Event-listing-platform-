@@ -37,7 +37,7 @@ const EventsGrid = ({ events }) => {
 
             {/* Price */}
             <p className="text-md font-medium text-gray-700">
-              {event?.price === 0 ? "Free" : `₹${event?.price}`}
+              {event?.price === 0 ? "Free" : `₹ ${event?.ticketPrice}`}
             </p>
 
             {/* Button */}

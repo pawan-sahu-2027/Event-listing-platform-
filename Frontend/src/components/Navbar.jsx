@@ -11,14 +11,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 import { useDispatch, useSelector } from "react-redux";
-// import { getUser, clearUser } from "../redux/userSlice"; 
+// import { getUser, clearUser } from "../redux/userSlice";
 import { getUser, clearUser } from "../redux/userSlice";
 import React, { useEffect } from "react";
 const Navbar = () => {
   const dispatch = useDispatch();
   console.log(`clearUser): ${clearUser}`);
   const user = useSelector((state) => state.user.user);
-  
 
   // console.log("user in navbar", user);
   useEffect(() => {
@@ -38,7 +37,7 @@ const Navbar = () => {
                   onClick={() => {
                     dispatch(clearUser());
 
-                      console.log("Before:", localStorage.getItem("AccessToken"));
+                    console.log("Before:", localStorage.getItem("AccessToken"));
                   }}
                   className="bg-red-500 text-white"
                 >
@@ -74,7 +73,15 @@ const Navbar = () => {
                 <Info size={18} />
                 <span>About</span>
               </Link>
-    
+
+              {user?.role === "admin" ? (
+                <Link className="flex flex-col items-center gap-1"  to="/admin/add-event">
+                  <Info size={18} />
+                  <span>Deshboard</span>
+                </Link>
+              ) : (
+                ""    
+              )}
             </div>
 
             {/* 🔥 Desktop Layout */}
@@ -103,12 +110,16 @@ const Navbar = () => {
                   <Info size={20} /> About
                 </Link>
 
-                <Link
-                  to="/admin/add-event"
-                  className="flex items-center gap-2 hover:text-yellow-300"
-                >
-                  <LayoutDashboard size={20} /> Dashboard
-                </Link>
+                {user?.role === "admin" ? (
+                  <Link
+                    to="/admin/add-event"
+                    className="flex items-center gap-2 hover:text-yellow-300"
+                  >
+                    <LayoutDashboard size={20} /> Dashboard
+                  </Link>
+                ) : (
+                  ""
+                )}
               </div>
               {user ? (
                 <Button

@@ -28,7 +28,7 @@ const SingleEvent = () => {
   const { event, loading } = useSelector((state) => state.event);
 
   const [quantity, setQuantity] = useState(1);
-
+  const API_URL = "https://z80x8c7mx3.execute-api.ap-south-1.amazonaws.com";
   const [people, setPeople] = useState([
     {
       name: "",
@@ -123,7 +123,7 @@ const SingleEvent = () => {
       // FREE EVENT
       if (event.ticketPrice === 0) {
         const res = await fetch(
-          "http://localhost:8080/api/v1/ticket/book-free",
+          `${API_URL}/api/v1/ticket/book-free`,
           {
             method: "POST",
             headers: {
@@ -142,7 +142,7 @@ const SingleEvent = () => {
 
         alert("Ticket booked successfully.");
 
-        navigate("/my-tickets");
+        // navigate("/my-tickets");
 
         return;
       }
@@ -152,7 +152,7 @@ const SingleEvent = () => {
      
       try {
         const res = await axios.post(
-          "http://localhost:8080/api/v1/payment/create-session",
+          `${API_URL}/api/v1/payment/create-session`,
           payload,
           {
             headers: {
