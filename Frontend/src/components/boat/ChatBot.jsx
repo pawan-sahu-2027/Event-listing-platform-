@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import "./ChatBoat.css";
+import "./Chatboat.css";
 
 
 const ChatBot = () => {
