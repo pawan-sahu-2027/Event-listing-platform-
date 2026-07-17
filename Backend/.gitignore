@@ -1,0 +1,27 @@
+Backend/src/utils/tickets/*.pdf
+
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Environment variables
+.env
+Frontend/.env
+Backend/.env.local
+
+# Build files
+dist/
+Frontend/dist/
+Backend/dist/
+
+# Serverless deployment files
+.serverless/
+Backend/.serverless/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
