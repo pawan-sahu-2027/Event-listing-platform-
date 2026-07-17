@@ -14,7 +14,7 @@ import PaymentSuccess from './pages/admin/PaymentSuccess';
 import SingleEvent from './components/SingleEvent';
 import DeleteEvents from './pages/admin/DeleteEvent';
 import EventsPage from './components/EventsPage';
-import ChatBot from "./components/boat/ChatBoat";
+import ChatBot from "./components/boat/ChatBot";
 // import PaymentPage from './pages/admin/PaymentPage';
 const router  = createBrowserRouter([
   {
