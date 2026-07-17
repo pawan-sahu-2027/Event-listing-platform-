@@ -37,12 +37,30 @@ app.use(
 /* -------------------- Stripe Webhook -------------------- */
 /* IMPORTANT: Must come BEFORE express.json() */
 
+// app.post(
+//   "/api/v1/payment/webhook",
+//   express.raw({ type: "application/json" }),
+//   stripeWebhook
+// );
+
+
+app.use((req, res, next) => {
+  console.log("METHOD:", req.method);
+  console.log("PATH:", req.path);
+  console.log("URL:", req.url);
+  next();
+});
+
+
 app.post(
   "/api/v1/payment/webhook",
   express.raw({ type: "application/json" }),
+  (req,res,next)=>{
+    console.log("🔥 APP.JS WEBHOOK ROUTE HIT");
+    next();
+  },
   stripeWebhook
 );
-
 /* -------------------- Body Parser -------------------- */
 
 app.use(express.json());

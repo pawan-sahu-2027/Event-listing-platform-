@@ -105,7 +105,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-ap-south-1-337dea81-019d",
-                "S3Key": "serverless/event-management-api/dev/1784129842498-2026-07-15T15:37:22.498Z/event-management-api.zip"
+                "S3Key": "serverless/event-management-api/dev/1784228814989-2026-07-16T19:06:54.989Z/event-management-api.zip"
               },
               "Handler": "src/lambda.handler",
               "Runtime": "nodejs22.x",
@@ -123,14 +123,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E": {
+          "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "HSdkF/GvIPoiA63qDQwWJBINausZHgX08ZJnIO4bSoE="
+              "CodeSha256": "t4sO79SYfm7wXZkiqtU6IilOIT5IPn8WrEe1j7Q8Lzg="
             }
           },
           "HttpApi": {
@@ -236,7 +236,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+              "Ref": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
             },
             "Export": {
               "Name": "sls-event-management-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -300,7 +300,7 @@
         "timeout": 30,
         "runtime": "nodejs22.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+        "versionLogicalId": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
       }
     },
     "configValidationMode": "warn",
@@ -321,7 +321,7 @@
     "artifact": "C:\\Users\\ASUS\\Desktop\\eventListing\\backend\\.serverless\\event-management-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/event-management-api/dev/1784129842498-2026-07-15T15:37:22.498Z",
+    "artifactDirectoryName": "serverless/event-management-api/dev/1784228814989-2026-07-16T19:06:54.989Z",
     "artifact": "event-management-api.zip"
   }
 }

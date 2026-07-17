@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-router.post(
+ router.post(
   "/advertisement-session",
   isAuthenticated,
   upload.single("image"),   

@@ -1,0 +1,7 @@
+src/utils/tickets/*.pdf
+
+
+# Serverless
+.serverless/
+
+.env

@@ -107,7 +107,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-ap-south-1-337dea81-019d",
-                  "S3Key": "serverless/event-management-api/dev/1784129842498-2026-07-15T15:37:22.498Z/event-management-api.zip"
+                  "S3Key": "serverless/event-management-api/dev/1784228814989-2026-07-16T19:06:54.989Z/event-management-api.zip"
                 },
                 "Handler": "src/lambda.handler",
                 "Runtime": "nodejs22.x",
@@ -125,14 +125,14 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E": {
+            "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "HSdkF/GvIPoiA63qDQwWJBINausZHgX08ZJnIO4bSoE="
+                "CodeSha256": "t4sO79SYfm7wXZkiqtU6IilOIT5IPn8WrEe1j7Q8Lzg="
               }
             },
             "HttpApi": {
@@ -241,7 +241,7 @@
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+                "Ref": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
               },
               "Export": {
                 "Name": "sls-event-management-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -304,7 +304,7 @@
           "timeout": 30,
           "runtime": "nodejs22.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+          "versionLogicalId": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
         }
       }
     },
@@ -409,7 +409,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-ap-south-1-337dea81-019d",
-                "S3Key": "serverless/event-management-api/dev/1784129842498-2026-07-15T15:37:22.498Z/event-management-api.zip"
+                "S3Key": "serverless/event-management-api/dev/1784228814989-2026-07-16T19:06:54.989Z/event-management-api.zip"
               },
               "Handler": "src/lambda.handler",
               "Runtime": "nodejs22.x",
@@ -427,14 +427,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E": {
+          "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "HSdkF/GvIPoiA63qDQwWJBINausZHgX08ZJnIO4bSoE="
+              "CodeSha256": "t4sO79SYfm7wXZkiqtU6IilOIT5IPn8WrEe1j7Q8Lzg="
             }
           },
           "HttpApi": {
@@ -543,7 +543,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+              "Ref": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
             },
             "Export": {
               "Name": "sls-event-management-api-dev-ApiLambdaFunctionQualifiedArn"
@@ -609,12 +609,12 @@
     "serviceProviderAwsCfStackName": "event-management-api-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:ap-south-1:037509276540:stack/event-management-api-dev/621540e0-7f4f-11f1-a68e-0a00cc44978d",
     "serviceProviderAwsCfStackCreated": "2026-07-14T06:43:55.631Z",
-    "serviceProviderAwsCfStackUpdated": "2026-07-15T14:57:16.031Z",
+    "serviceProviderAwsCfStackUpdated": "2026-07-16T19:01:19.821Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "ApiLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:ap-south-1:037509276540:function:event-management-api-dev-api:7",
+        "OutputValue": "arn:aws:lambda:ap-south-1:037509276540:function:event-management-api-dev-api:12",
         "Description": "Current Lambda function version",
         "ExportName": "sls-event-management-api-dev-ApiLambdaFunctionQualifiedArn"
       },
@@ -729,7 +729,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-ap-south-1-337dea81-019d",
-              "S3Key": "serverless/event-management-api/dev/1784129842498-2026-07-15T15:37:22.498Z/event-management-api.zip"
+              "S3Key": "serverless/event-management-api/dev/1784228814989-2026-07-16T19:06:54.989Z/event-management-api.zip"
             },
             "Handler": "src/lambda.handler",
             "Runtime": "nodejs22.x",
@@ -747,14 +747,14 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E": {
+        "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "HSdkF/GvIPoiA63qDQwWJBINausZHgX08ZJnIO4bSoE="
+            "CodeSha256": "t4sO79SYfm7wXZkiqtU6IilOIT5IPn8WrEe1j7Q8Lzg="
           }
         },
         "HttpApi": {
@@ -863,7 +863,7 @@
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionI46ULuCFhymYUrMhquBmJ7T4UGXfcSo1sKVCuZMvy1E"
+            "Ref": "ApiLambdaVersionpHrwf9nsfIGtmO1QbFxD2uGTSIubPRkD2rw0I55aw"
           },
           "Export": {
             "Name": "sls-event-management-api-dev-ApiLambdaFunctionQualifiedArn"

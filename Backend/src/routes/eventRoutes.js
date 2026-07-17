@@ -4,7 +4,7 @@ import { getAllEvent , getSingleId ,deleteEvent , createEvent  } from "../contro
 import { isAuthenticated } from "../middleware/isAuthenticated.js";
 const router = express.Router();
 
-router.post("/create",singleUpload, createEvent);  
+router.post("/create",isAuthenticated, singleUpload, createEvent);  
 router.get("/all", getAllEvent);
 router.get("/single/:id" ,  getSingleId);
 router.delete("/delete/:id" , isAuthenticated , deleteEvent );
