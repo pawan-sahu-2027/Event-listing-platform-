@@ -313,10 +313,9 @@ export const createCheckoutSession = async (req, res) => {
         },
       ],
 
-      success_url: "http://localhost:5173/",
+      success_url:  "https://www.event-booking.live/ticket-success",
+      cancel_url: "https://www.event-booking.live/payment-failed",
       // `${process.env.FRONTEND_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
-
-      cancel_url: "http://localhost:5173/",
 
       metadata: {
         eventId,

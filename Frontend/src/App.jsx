@@ -15,6 +15,8 @@ import SingleEvent from './components/SingleEvent';
 import DeleteEvents from './pages/admin/DeleteEvent';
 import EventsPage from './components/EventsPage';
 import ChatBot from "./components/boat/ChatBot";
+import TicketSuccess from './components/TicketSuccess';
+import  PaymentFailed from "./components/PaymentFailed;"
 // import PaymentPage from './pages/admin/PaymentPage';
 const router  = createBrowserRouter([
   {
@@ -47,6 +49,13 @@ const router  = createBrowserRouter([
     path:"/single-event/:id",
     element:<SingleEvent/>
   },{
+    path:"/ticket-success" ,
+    element:<TicketSuccess />
+  },{
+    path:"payment-failed",
+    element:<PaymentFailed/>
+  },
+  {
     path: "/admin",
     element: <DashboardLayout />,   // ✅ correct
     children: [

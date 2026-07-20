@@ -32,7 +32,7 @@ const Sidebar = ({ onApplyFilters }) => {
   };
 
   return (
-    <div className="bg-white p-5 rounded-xl shadow-md">
+    <div     className="md:bg-white md:p-5 md:rounded-xl md:shadow-md">
       <h2 className="text-xl font-semibold mb-5">Filters</h2>
 
       {/* Category */}
