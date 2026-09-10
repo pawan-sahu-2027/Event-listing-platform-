@@ -36,6 +36,7 @@ console.log("Sending:", userDetails);
     } catch (error) {
   console.log("Status:", error.response?.status);
   console.log("Data:", error.response?.data);
+         alert(error.response?.data);
   console.log(error);
 }
   };
