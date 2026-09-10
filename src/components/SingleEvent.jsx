@@ -149,7 +149,7 @@ const SingleEvent = () => {
       if (!AccessToken) {
         return alert("Please login to book a ticket.");
       }
-      console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+
 
       try {
         const res = await axios.post(
