@@ -160,6 +160,10 @@ const SingleEvent = () => {
               Authorization: `Bearer ${AccessToken}`,
             },
           },
+
+
+
+          
         );
 
         console.log("Response:", res.data);
