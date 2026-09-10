@@ -122,17 +122,14 @@ const SingleEvent = () => {
 
       // FREE EVENT
       if (event.ticketPrice === 0) {
-        const res = await fetch(
-          `${API_URL}/api/v1/ticket/book-free`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: localStorage.getItem("AccessToken"),
-            },
-            body: JSON.stringify(payload),
+        const res = await fetch(`${API_URL}/api/v1/ticket/book-free`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: localStorage.getItem("AccessToken"),
           },
-        );
+          body: JSON.stringify(payload),
+        });
 
         const data = await res.json();
 
@@ -148,8 +145,12 @@ const SingleEvent = () => {
       }
       const AccessToken = localStorage.getItem("AccessToken");
       console.log(AccessToken);
-      console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
-     
+      // User is not logged in
+      if (!AccessToken) {
+        return alert("Please login to book a ticket.");
+      }
+
+
       try {
         const res = await axios.post(
           `${API_URL}/api/v1/payment/create-session`,

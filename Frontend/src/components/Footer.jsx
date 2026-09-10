@@ -27,7 +27,7 @@ const Footer = () => {
           <p className="text-sm mt-2">
             123 Electronics St, Style City, NY 10001
           </p>
-          <p className="text-sm">Email: support@ekart.com</p>
+          <p className="text-sm">Email: support@coffee.com</p>
           <p className="text-sm">Phone: (123) 456-7890</p>
         </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
       <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm">
         <p>
           &copy; {new Date().getFullYear()}{" "}
-          <span className="text-pink-600">EKart</span>. All rights reserved.
+          <span className="text-pink-600">Coffee</span>. All rights reserved.
         </p>
       </div>
     </footer>

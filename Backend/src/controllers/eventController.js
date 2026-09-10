@@ -28,7 +28,7 @@ export const getAllEvent = async (req, res) => {
 };
 
 export const createEvent = async (req, res) => {
-  console.log("API hit successfully");
+  // console.log("API hit successfully");
   try {
     const {
       title,
@@ -59,7 +59,7 @@ export const createEvent = async (req, res) => {
         success: false,
       });
     }
-    console.log("receive all fields  successfully");
+    // console.log("receive all fields  successfully");
 
     if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
       return res.status(400).json({
